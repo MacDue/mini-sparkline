@@ -1,0 +1,16 @@
+<script src="./mini-sparkline.js"></script>
+<script>
+  window.onload = function() {
+    var sparkUpdate = miniSparkline("#spark", 15);
+    var i = 0;
+    setInterval(function(){
+      sparkUpdate(Math.sin(i))
+      i+=0.5;
+    }, 100)
+  }
+</script>
+<body>
+  <div id="spark" style="width:100px; height: 100px;">
+    <h1>Hello!</h1>
+  </div>
+</body>
